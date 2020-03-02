@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Players</title>
+	<link rel="stylesheet" type="text/css" href="jucatori.css">
+	
+<script>
+
+window.onload=function()
+{ 
+    var p=document.getElementById("p1");
+	var r=document.getElementsByName("intrebare");
+	var b = document.getElementById("buton");
+	var d = document.getElementById("D");
+	b.onclick = function(){
+		if (r[0].checked) 
+			{var myVar = setInterval(creare,2000,d);
+			setTimeout(function(){clearInterval(myVar);},4000);
+			
+			}
+		
+		
+
+		}
+}
+
+function creare(d){ var nou=document.createElement("img"); 
+						  var nou2 = document.createElement("img");
+							  nou.src="furie.png";
+						     nou2.setAttribute("src","bin.png"); 
+							 
+							 nou.setAttribute("draggable",true);
+							 nou.setAttribute("ondragstart","drag(event)");
+							 
+							 nou2.setAttribute("ondrop","drop(event)");
+							 nou2.setAttribute("ondragover","allowDrop(event)");
+							 
+							 nou.setAttribute("id","x");
+							 nou.className+="img";
+							 nou2.className+="img";
+						      d.appendChild(nou); // se insereaza nodul in arbore si corespondent in document
+							  d.innerHTML+='<div id="D2"> Arunca furia la gunoi! Un joc e facut sa te distrezi! </div>';
+							  d.appendChild(nou2);
+							  
+							  
+						}
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+ //ev.target.appendChild(document.getElementById(data));
+ document.getElementById(data).style.visibility = "hidden";
+}
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+
+</script>
+	
+</head>
+
+<body class = "main">
+
+<div class = "header">
+
+	<nav class = "navbar">
+		
+			<a href="principal.html"><img src = "logo.jpg" id = "logo" alt = "HS logo"></a>
+			<a href="paginaPachete.html">Pachete META</a> 
+			<a href="paginaStreamPop.html">Streameri populari</a> 
+			<a href="paginaGhiduri.html">Ghiduri diverse</a> 
+			<a href="jucatoriNoi.html" class = "active">Jucatori noi</a>
+		
+	</nav>
+
+</div>
+
+<div class="row">
+<div class = "col-2 left" id = "D">
+	<input type="checkbox" name="intrebare" id = "p1"> Vrei sa aflii cheia succesului?<br>
+	<input type="button" id = "buton" value="Descopera!" >
+	
+	
+
+</div>
+
+
+
+<div class = "col-8 center" align = "center">
+	<h1>Coming soon</h1>
+
+</div>
+
+
+<div class = "col-2">
+</div>
+
+<div>
+</div>
+</div>
+
+<div class="footer">
+  <p>Joc creat de Blizzard.</p>
+</div>
+</body>
+
+</html>

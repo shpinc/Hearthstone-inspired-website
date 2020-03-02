@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jucatori</title>
+	<link rel="stylesheet" type="text/css" href="codPachete.css">
+	
+<script> 
+window.onload=function ()
+{var b=document.getElementsByClassName("b1");
+for (let i = 0; i < b.length; i++) {
+  b[i].onclick=fculoare;
+}
+ 
+}
+function fculoare()
+{var culoare1, culoare2, culoare3; 
+var r=document.getElementsByName("r1")
+for(i=0;i<r.length;i++)
+ if (r[i].checked) culoare1=r[i].value;
+ var b1=document.getElementsByClassName("Th");
+ b1[0].style.backgroundColor=culoare1;
+ var r=document.getElementsByName("r2")
+for(i=0;i<r.length;i++)
+ if (r[i].checked) culoare2=r[i].value;
+ var b2=document.getElementsByClassName("Kp");
+ b2[0].style.backgroundColor=culoare2;
+ var r=document.getElementsByName("r3")
+for(i=0;i<r.length;i++)
+ if (r[i].checked) culoare3=r[i].value;
+ var b3=document.getElementsByClassName("Al");
+ b3[0].style.backgroundColor=culoare3;
+ 
+//alert(culoare);
+}
+</script>
+</head>
+
+<body class = "main">
+
+<div class = "header">
+
+	<nav class = "navbar">
+		
+			<a href="principal.html"><img src = "logo.jpg" id = "logo" alt = "HS logo"></a>
+			<a href="paginaPachete.html">Pachete META</a> 
+			<a href="paginaStreamPop.html" class = "active">Streameri populari</a> 
+			<a href="paginaGhiduri.html">Ghiduri diverse</a> 
+			<a href="jucatoriNoi.html">Jucatori noi</a>
+		
+	</nav>
+
+</div>
+
+<div class="row">
+<div class = "col-2 left">
+	
+	<div class="dropdown">
+	<button class="dropbtn"><span style="color:red">Youtube</span> Channels</button>
+		<div class="dropdown-content">
+			<a href="https://www.youtube.com/channel/UC9GenoUeEqbMrWMysALYR1Q">Thijs</a>
+			<a href="https://www.youtube.com/user/Kripparrian">Kripparian</a>
+			<a href="https://www.youtube.com/channel/UC3oHeWsu0w2I_4JnwHTz-Tw?pbjreload=10">Kolento</a>
+			<a href="https://www.youtube.com/channel/UC_7EMCIsl9xfQlvGTxAskgw">Alliestrasza</a>
+			<a href="https://www.youtube.com/channel/UCItISwABVRjboRSBBi6WYTA">Kibler</a>
+		</div>
+	</div>
+			
+	
+</div>
+
+<div class = "col-8 center">
+	
+	<div class = "chenar Th">
+	Thijs
+	<figure><img src="thijs.png" alt="tea" class = "poza" ></figure>
+	<p>Thijs "Thijs" Molendijk is a Hearthstone player from the Netherlands, currently playing for G2 Esports.</p>
+	<h2>Ce echipa crezi ca va alege la urmatorul turneu?</h2>
+	<fieldset>
+<label >Rosu(team Red)</label><input type="radio" name="r1"  value="red"><br>
+<label>Albastru(team Blue)</label><input type="radio" name="r1"  value="blue"><br>
+<input class="b1" type="button" value="aplica selectia"><br>
+</fieldset>
+	</div>
+	
+	<div class = "chenar Kp">
+	Kripparian
+	<figure><img src="krip.png" alt="rom"  class = "poza"></figure>
+	<p>Kripparrian is widely regarded as one of the best Arena players in Hearthstone. While he doesn't focus on constructed play, he has shown a strong grasp 
+	of constructed during the 2013 BlizzCon Innkeeper's Invitational (where he came in second) and the ESGN Fight Night series. He finally did achieve Legend 
+	rank in Hearthstone's constructed mode in August 2015. He posts daily videos on his Youtube Channel and has one of the most popular streams on Twitch.tv.
+	</p>
+	<h2>Ce echipa crezi ca va alege la urmatorul turneu?</h2>
+	<fieldset>
+<label >Rosu(team Red)</label><input type="radio" name="r2"  value="red"><br>
+<label>Albastru(team Blue)</label><input type="radio" name="r2"  value="blue"><br>
+<input class="b1" type="button" value="aplica selectia"><br>
+</fieldset>
+	</div>
+	
+	<div class = "chenar Al">
+	Alliestrasza
+	<figure><img src="allie.jpg" alt="gurl"  class = "poza"></figure>
+	<p> Alliestrasza lives in San Diego and has been a Hearthstone streamer since she graduated college in 2015, earning a degree in Advertising and Public Relations.
+	She has always had an interest in entertaining people and loves Hearthstone because it's based on strategy and outsmarting your opponent.
+	Outside of streaming she likes to play Overwatch and PUBG with friends, do yoga and go to music festivals or concerts.
+	She is also an avid supporter of cryptocurrency, so much so that she accepts donations in various coins. 
+	In 2017 she co-hosted the Value Town Podcast and in 2018 she hopes to expand from streaming and also become a competitive player.</p>
+	
+	<h2>Ce echipa crezi ca va alege la urmatorul turneu?</h2>
+	<fieldset>
+	<label >Rosu(team Red)</label><input type="radio" name="r3"  value="red"><br>
+	<label>Albastru(team Blue)</label><input type="radio" name="r3"  value="blue"><br>
+	<input class="b1" type="button" value="aplica selectia"><br>
+	</fieldset>
+	</div>
+	
+	
+	
+</div>
+
+
+<div class = "col-2">
+</div>
+
+<div>
+</div>
+</div>
+
+<div class="footer">
+  <p>Joc creat de Blizzard.</p>
+</div>
+</body>
+
+</html>

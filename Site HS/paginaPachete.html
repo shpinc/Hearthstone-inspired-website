@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pachete Meta</title>
+	<link rel="stylesheet" type="text/css" href="codPachete.css">
+	
+	
+<script>
+window.onload = function(){
+var T1 = document.getElementById("1");
+var T2 = document.getElementById("2");
+var T3 = document.getElementById("3");
+T1.TierRank = 1;
+T2.TierRank = 2;
+T3.TierRank = 3;
+
+document.getElementById("1").addEventListener("click", function(){ alert(this.TierRank);}, true);
+ 
+document.getElementById("ele").addEventListener("click", function(){
+	
+	var theCSSprop = window.getComputedStyle(this, null).getPropertyValue("background-color");
+	alert(theCSSprop);
+	this.style.backgroundColor = "black";
+},true);
+}
+</script>
+</head>
+
+<body class = "main">
+
+<div class = "header">
+
+	<nav class = "navbar">
+		
+			<a href="principal.html"><img src = "logo.jpg" id = "logo" alt = "HS logo"></a>
+			<a href="paginaPachete.html" class = "active">Pachete META</a> 
+			<a href="paginaStreamPop.html">Streameri populari</a> 
+			<a href="paginaGhiduri.html">Ghiduri diverse</a> 
+			<a href="jucatoriNoi.html">Jucatori noi</a>
+		
+	</nav>
+
+</div>
+
+<div class="row">
+<div class = "col-2 aside">
+<figure><img src="pack.png" alt="pachet" class = "pachet" ></figure>
+
+</div>
+
+<div class = "col-8 center">
+
+<table align="center">
+  <tr>
+    <th>Tier 1 Decks</th>
+    <th>Tier 2 Decks</th>
+	<th>Tier 3 Decks</th>
+  </tr>
+  <tr id = "1">
+    <td name = "DH" id = "ele" value = "100">Deathrattle Hunter</td>
+    <td value = "ZoLo">Zoolock</td>
+	<td value = "SpHu">Spell Hunter</td>
+  </tr>
+  <tr id = "2">
+    <td value = "OdRo">Odd Rogue</td>
+    <td value = "MiRO">Miracle Rogue</td>
+	<td value = "EvMa">Even Mage</td>
+  </tr>
+  <tr id = "3">
+    <td value = "EvSh">Even Shaman</td>
+    <td value = "BiPr">Big Priest</td>
+	<td value = "IdRo">Identity Rogue</td>
+  </tr>
+</table>
+
+</div>
+
+
+<div class = "col-2 aside">
+	<figure><img src="pack.png" alt="pachet" class = "pachet"  ></figure>
+	
+</div>
+
+
+</div>
+
+
+<div class="footer">
+  <p>Joc creat de Blizzard.</p>
+</div>
+
+</body>
+
+</html>
